@@ -5,3 +5,6 @@ CAPS_WORD_ENABLE = yes
 
 # Allows QK_BOOT to be
 BOOTLOADER = atmel-dfu
+
+OLED_ENABLE = yes
+LTO_ENABLE = yes
