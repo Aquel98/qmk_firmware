@@ -233,7 +233,7 @@ bool shutdown_user(bool jump_to_bootloader) {
     return true;
 }
 
-#define FRAME_DURATION 100 // How long each frame lasts in milliseconds
+#define FRAME_DURATION 50 // How long each frame lasts in milliseconds
 
 // Animation variables
 uint32_t timer         = 0;
@@ -254,11 +254,11 @@ static void render_animation(void) {
                                                  0, 0, 3, 5, 10, 20, 26, 52, 40, 84, 104, 84, 104, 84, 106, 117, 58, 53, 26, 29, 14, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,   0,   0,  0,   0,  0,  0,   0,  0,  0,   0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,   0,  0,   0,  0,  0,   0,  0, 0,   0,  0,   0,   0,   0,   0,   0,  0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 0, 0, 0, 0, 0, 0, 0,  0,  0,   0,   0,   0,   0,   0,  0,  0,  0,  0,   0,   0,   0,  0,  0,   0,  0,   0,  0,   0,  0,   0,   0,  0, 0, 0, 0, 0, 0, 0};
 
     // Animation frames array
-    const char *frameArray[10] = {pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballTilt1, pokeballTilt2, pokeballTilt3, pokeballTilt2, pokeballTilt1};
+    const char *frameArray[15] = {pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballLevel, pokeballTilt1, pokeballTilt2, pokeballTilt3, pokeballTilt2, pokeballTilt1};
 
     // Frame sizes array
-    uint16_t frame_sizes[10] = {
-        sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballTilt1), sizeof(pokeballTilt2), sizeof(pokeballTilt3), sizeof(pokeballTilt2), sizeof(pokeballTilt1),
+    uint16_t frame_sizes[15] = {
+        sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballLevel), sizeof(pokeballTilt1), sizeof(pokeballTilt2), sizeof(pokeballTilt3), sizeof(pokeballTilt2), sizeof(pokeballTilt1),
     };
 
     // Run animation
