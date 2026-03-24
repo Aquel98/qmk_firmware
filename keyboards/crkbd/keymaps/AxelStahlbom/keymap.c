@@ -56,7 +56,7 @@ enum keymapLayers {
        KC_TAB,    SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,    SE_P, SE_ARNG,\
       KC_LCTL,    SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_ODIA, SE_ADIA,\
       KC_LSFT,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_SLSH,  GAMING,\
-                                           KC_ESC, KC_DEL,  KC_SPC,    ENT_FUN, BSP_SYM, ESC_NUM
+                                           KC_DEL, KC_SPC,  KC_ESC,    ENT_FUN, BSP_SYM, ESC_NUM
 
 #define LAYOUT_LAYER_SYMBOLS                                                                                                          \
       _______, SE_EXLM, SE_QUES, SE_LCBR, SE_RCBR, SE_PIPE,                      _______, SE_LABK, SE_RABK,  SE_DLR, SE_QUOT, SE_DQUO,\
