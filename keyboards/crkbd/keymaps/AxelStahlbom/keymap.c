@@ -42,10 +42,10 @@ enum keymapLayers {
 #define ESC_NUM LT(LAYER_NUMPAD, KC_ESC)
 #define ENT_FUN LT(LAYER_FUNCTION, KC_ENT)
 #define GAMING TG(LAYER_GAMING)
-#define DEL_L_7 LT(LAYER_7, KC_ESC)
-#define TAB_L_8 LT(LAYER_8, KC_TAB) 
+#define DEL_L_7 LT(LAYER_7, KC_DEL)
+#define TAB_L_8 LT(LAYER_8, KC_TAB)
 
-
+// clang-format off
 #define LAYOUT_LAYER_BASE                                                                                                             \
        KC_TAB,    SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,    SE_P, SE_ARNG,\
       CW_TOGG,    SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_ODIA, SE_ADIA,\
@@ -132,44 +132,34 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
         'L', 'L', 'L', 'L', 'L', 'L',   'R', 'R', 'R', 'R', 'R', 'R',
                        '*', '*', '*',   '*', '*', '*'
     );
+// clang-format on
 
 #ifdef RGB_MATRIX_ENABLE
-rgb_t limitColor(hsv_t colorHsv)
-{
-    if (colorHsv.v > rgb_matrix_get_val())
-    {
+rgb_t limitColor(hsv_t colorHsv) {
+    if (colorHsv.v > rgb_matrix_get_val()) {
         colorHsv.v = rgb_matrix_get_val();
     }
     return hsv_to_rgb(colorHsv);
 }
 
-void setColor(int8_t i, rgb_t color)
-{
+void setColor(int8_t i, rgb_t color) {
     float underglowBrightnessFactor = 2.0;
-    if(HAS_FLAGS(g_led_config.flags[i], 0x02))
-    {
+    if (HAS_FLAGS(g_led_config.flags[i], 0x02)) {
         rgb_matrix_set_color(i, color.r * underglowBrightnessFactor, color.g * underglowBrightnessFactor, color.b * underglowBrightnessFactor);
-    }
-    else
-    {
+    } else {
         rgb_matrix_set_color(i, color.r, color.g, color.b);
     }
 }
 
-
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    rgb_t colorLightGreen = limitColor(
-        (hsv_t){100, 160, 25});
-    rgb_t colorBlue = limitColor(
-        (hsv_t){140, 200, 20});
-    rgb_t colorYellow = limitColor(
-        (hsv_t){35, 220, 20});
-    rgb_t colorViolet = limitColor(
-        (hsv_t){190, 150, 20});
-    rgb_t colorOrange = limitColor((hsv_t){20, 180, 20});
+    rgb_t colorLightGreen = limitColor((hsv_t){100, 160, 25});
+    rgb_t colorBlue       = limitColor((hsv_t){140, 200, 20});
+    rgb_t colorYellow     = limitColor((hsv_t){35, 220, 20});
+    rgb_t colorViolet     = limitColor((hsv_t){190, 150, 20});
+    rgb_t colorOrange     = limitColor((hsv_t){20, 180, 20});
 
     for (uint8_t i = led_min; i < led_max; i++) {
-        switch(get_highest_layer(layer_state|default_layer_state)) {
+        switch (get_highest_layer(layer_state | default_layer_state)) {
             case LAYER_FUNCTION:
                 setColor(i, colorOrange);
                 break;
@@ -199,7 +189,7 @@ bool caps_word_press_user(uint16_t keycode) {
         // Keycodes that continue Caps Word, with shift applied.
         case KC_A ... KC_Z:
         case SE_MINS:
-            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            add_weak_mods(MOD_BIT(KC_LSFT)); // Apply shift to next key.
             return true;
 
         // Keycodes that continue Caps Word, without shifting.
