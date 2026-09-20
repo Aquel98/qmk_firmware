@@ -48,9 +48,9 @@ enum keymapLayers {
 
 // clang-format off
 #define LAYOUT_LAYER_BASE                                                                                                             \
-       KC_TAB,    SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,    SE_P, SE_ARNG,\
+      _______,    SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,    SE_P, SE_ARNG,\
       CW_TOGG,    SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_ODIA, SE_ADIA,\
-      KC_LSFT,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_SLSH,  GAMING,\
+      _______,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_SLSH,  GAMING,\
                                           DEL_L_7, SPC_NAV, ESC_NUM,    ENT_FUN, BSP_SYM, TAB_L_8
 
 #define LAYOUT_LAYER_GAMING                                                                                                           \
@@ -62,7 +62,7 @@ enum keymapLayers {
 #define LAYOUT_LAYER_SYMBOLS                                                                                                          \
       _______, SE_EXLM, SE_QUES, SE_LCBR, SE_RCBR, SE_PIPE,                      _______, SE_LABK, SE_RABK,  SE_DLR, SE_QUOT, SE_DQUO,\
       KC_LCTL, SE_AMPR, SE_HASH, SE_LPRN, SE_RPRN,   SE_AT,                      SE_BSLS, SE_SCLN, SE_COLN,  SE_EQL, SE_UNDS, _______,\
-      KC_LSFT, SE_PERC, SE_CIRC, SE_LBRC, SE_RBRC, SE_TILD,                      SE_PLUS, SE_MINS, SE_ASTR, SE_SLSH, SE_ACUT, _______,\
+      KC_LSFT, SE_PERC, SE_CIRC, SE_LBRC, SE_RBRC, SE_TILD,                      SE_PLUS, SE_MINS, SE_ASTR, SE_SLSH, SE_ACUT,  SE_GRV,\
                                           _______, _______, _______,    _______, _______, _______
 
 #define LAYOUT_LAYER_NAVIGATION                                                                                                       \
